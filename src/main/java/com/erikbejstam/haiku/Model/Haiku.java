@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-// The haiku should have
-// name, id, creator, text
-
 @Entity
 public class Haiku {
 
@@ -28,6 +25,35 @@ public class Haiku {
     public Haiku(String authorName, String title, String text) {
         this.authorName = authorName;
         this.title = title;
+        this.text = text;
+        this.createdAt = LocalDateTime.now();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setText(String text) {
         this.text = text;
     }
 }
