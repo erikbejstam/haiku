@@ -13,9 +13,6 @@ public class Haiku {
 
     private String authorName;
 
-    @Column(length=50, nullable = false)
-    private String title;
-
     @Column(length=100, nullable = false)
     private String text;
 
@@ -27,7 +24,6 @@ public class Haiku {
 
     public Haiku(String authorName, String title, String text) {
         this.authorName = authorName;
-        this.title = title;
         this.text = text;
         this.createdAt = LocalDateTime.now();
     }
@@ -39,10 +35,6 @@ public class Haiku {
 
     public String getAuthorName() {
         return authorName;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public String getText() {
@@ -58,13 +50,7 @@ public class Haiku {
         this.authorName = authorName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public void setText(String text) {
         this.text = text;
     }
-
-
 }

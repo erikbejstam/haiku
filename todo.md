@@ -2,7 +2,7 @@
 
 ## Haiku Controller
 
- [] - Add delete handler  
+ [x] - Add delete handler  
  [] - Add update handler  
  
 ## User Controller
