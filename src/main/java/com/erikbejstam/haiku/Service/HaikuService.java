@@ -2,6 +2,7 @@ package com.erikbejstam.haiku.Service;
 
 import com.erikbejstam.haiku.Model.Haiku;
 import com.erikbejstam.haiku.Repository.HaikuRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,5 +29,10 @@ public class HaikuService {
 
     public Haiku save(Haiku haiku) {
         return repository.save(haiku);
+    }
+
+    public void delete(Long id) {
+        if (!repository.existsById(id)) throw new EntityNotFoundException("User with id " + id + "not found.");
+        repository.deleteById(id);
     }
 }
