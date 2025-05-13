@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HaikuService {
@@ -14,6 +15,11 @@ public class HaikuService {
     @Autowired
     public HaikuService(HaikuRepository repository) {
         this.repository = repository;
+    }
+
+    public Haiku findById(Long id) {
+        Optional<Haiku> haiku = repository.findById(id);
+        return haiku.orElse(null);
     }
 
     public List<Haiku> findAll() {
