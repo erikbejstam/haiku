@@ -22,6 +22,9 @@ public class Haiku {
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
+    // empty constructor as is required by jpa
+    public Haiku() {}
+
     public Haiku(String authorName, String title, String text) {
         this.authorName = authorName;
         this.title = title;
@@ -29,6 +32,7 @@ public class Haiku {
         this.createdAt = LocalDateTime.now();
     }
 
+    // want to be able to get all information about the object.
     public Long getId() {
         return id;
     }
@@ -45,6 +49,11 @@ public class Haiku {
         return text;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    // Does not have to be able to "set"/update everything. Will maybe change later.
     public void setAuthorName(String authorName) {
         this.authorName = authorName;
     }
@@ -56,4 +65,6 @@ public class Haiku {
     public void setText(String text) {
         this.text = text;
     }
+
+
 }
