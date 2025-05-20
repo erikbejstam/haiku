@@ -17,12 +17,13 @@ public class AuthService {
     @Autowired private PasswordEncoder passwordEncoder;
     @Autowired private JWTUtil jwtUtil;
 
-    public void register(RegisterRequest req) {
+    public User register(RegisterRequest req) {
         User user = new User();
         user.setUsername(req.username);
         user.setPassword(passwordEncoder.encode(req.password));
         user.setEmail(req.email);
         userRepository.save(user);
+        return user;
     }
 
     public String login(LoginRequest req) {
