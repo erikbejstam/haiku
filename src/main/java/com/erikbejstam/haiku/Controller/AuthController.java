@@ -23,4 +23,10 @@ public class AuthController {
         UserResponse userResponse = new UserResponse(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest req) {
+        String token = authService.login(req);
+        return ResponseEntity.ok(new AuthResponse(token));
+    }
 }
