@@ -20,3 +20,6 @@ A simple solution for now would be for the service to get Optional<Haiku> and th
 Then the controller can look if `haiku == null` and throw new `ResponseStatusException(HttpStatus.NOT_FOUND)`.
 Else it just returns a ResponseEntity<Haiku>.
 
+---
+
+Next, let's create the users, with related functionality.
