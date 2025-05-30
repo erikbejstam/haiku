@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+</head>
+<body>
+  <h1>Haiku</h1>
+
+  <div id="haiku"></div>
+
+  <script>
+    <!-- Take a look at this later, only works for one haiku. -->
+    fetch('/api/haikus')
+        .then(response => {
+            console.log('Got response:', response);
+            return response.json();
+        })
+        .then(data => {
+          console.log('Parsed JSON (array):', data);
+
+          // Access the first haiku object in the array
+          const haiku = data[0];
+
+          const container = document.getElementById('haiku');
+
+          const haikuHtml = `
+              <p><strong>Author:</strong> ${haiku.authorName}</p>
+              <p><strong>Text:</strong> ${haiku.text}</p>
+              <p><strong>Date:</strong> ${new Date(haiku.createdAt).toLocaleString()}</p>
+          `;
+
+          container.innerHTML = haikuHtml;
+      })
+      .catch(error => {
+          console.error('Error fetching haiku:', error);
+      });
+  </script>
+
+</body>
+</html>
