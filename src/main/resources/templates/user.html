@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=eng xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User</title>
 </head>
 <body>
+
+<h1 th:text="This is the user page of ${user.username}">This is the user page of [username]</h1>
 
 </body>
 </html>
