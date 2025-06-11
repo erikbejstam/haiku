@@ -11,46 +11,33 @@ public class Haiku {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String authorName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User author;
 
-    @Column(length=100, nullable = false)
+    @Column(length = 100, nullable = false)
     private String text;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
     // empty constructor as is required by jpa
-    public Haiku() {}
+    public Haiku() {
+    }
 
-    public Haiku(String authorName, String title, String text) {
-        this.authorName = authorName;
+    public Haiku(User author, String text) {
+        this.author = author;
         this.text = text;
         this.createdAt = LocalDateTime.now();
     }
 
-    // want to be able to get all information about the object.
-    public Long getId() {
-        return id;
-    }
+    // Getters
 
-    public String getAuthorName() {
-        return authorName;
+    public User getAuthor() {
+        return author;
     }
 
     public String getText() {
         return text;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    // Does not have to be able to "set"/update everything. Will maybe change later.
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 }
