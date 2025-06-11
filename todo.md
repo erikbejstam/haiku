@@ -2,21 +2,30 @@
 
 ## Haiku Controller
 
- [x] - Add delete handler  
- [] - Add update handler  
+ [x] Add delete handler  
+ [] Add update handler  
  
 ## User Controller
 
-[] - Add update handler  
-[] - Add read handler  
-[] - Add delete handler  
-[] - Add create handler  
+[] Add update handler  
+[] Add read handler  
+[] Add delete handler  
+[] Add create handler  
 
 ## Page Controller
 
+[x] Add / handler
+[x] Add /user/{id} handler
+
 ## Security
 
+[x] Allow non-authenticated clients only on /
+
 ## Database setup
+
+[] Make sure your database structure and tables are set up properly.
+[] Make sure the Spring Hibernate syntax is proper
+[] Use Postgres
 
 ## General direction
 
