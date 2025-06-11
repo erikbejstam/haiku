@@ -17,3 +17,15 @@ in the model yet however.
 I have the UserController, UserRepository and the UserService. I'm not sure I wrote them correctly.
 I guess the next step will be to flesh those out, and experimenting with the user.html page,
 and implementing some simple security options in the `SecurityFilterChain`. 
+
+### 11/6
+
+Today I started off with writing a thymeleaf "fragment" that will be the navbar basically.
+
+Then I update the user and main html pages to render haikus, and have links between the two pages, so it is easily navigable. 
+
+Note: Thymeleaf uses the getters in the classes for getting the data. At first I just got a bunch of errors, but it was because i hadn't
+written the getters for the right data, so Thymeleaf couldn't fint it. Remember this.
+
+I also updated the User and Haiku classes to make the database tables interlink. I haven't fully tested this yet.
+But basically I put `@OneToMany` and `@ManyToOne` annotations on the proper fields in the classes.

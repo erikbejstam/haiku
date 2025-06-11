@@ -2,6 +2,8 @@ package com.erikbejstam.haiku.Model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "haikuuser")
 public class User {
@@ -12,12 +14,23 @@ public class User {
     private String username;
     private String password;
     private String email;
+    @OneToMany(mappedBy="author")
+    private List<Haiku> haikus;
 
     public User(String username, String password, String email) {
-        username = username;
-        password = password;
-        email = email;
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     public User() {}
+
+    public String getUsername() {
+        return username;
+    }
+
+    public List<Haiku> getHaikus() {return haikus;}
+
+    public Long getId() { return id; }
 }
+
