@@ -12,7 +12,8 @@
   <div id="haikus">
     <div th:each="haiku : ${haikus}" class="haiku">
       <div th:text="${haiku.text}">Haiku</div>
-      <div th:text="${haiku.authorName}">Author</div>
+      <a  th:href="@{/user/{id}(id=${haiku.author.id})}"
+          th:text="${haiku.author.username}">Author</a>
     </div>
   </div>
 
