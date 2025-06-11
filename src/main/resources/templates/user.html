@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang=eng xmlns:th="http://www.thymeleaf.org">
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>User</title>
 </head>
 <body>
+    <div th:replace="fragments/menu :: menu"></div>
 
-<h1 th:text="This is the user page of ${user.username}">This is the user page of [username]</h1>
+    <h2 th:text="'This is the user page of ' + ${user.username}">This is the user page of [username]</h2> <!-- Note: I had problems with this at first. You have to create getters for the value you want to access ofc!! -->
 
 </body>
 </html>
