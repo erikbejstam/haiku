@@ -34,6 +34,15 @@ Spring creates a user and puts it into this UserDetailsService that "is the db" 
 Later on, you'll have a more complex UserDetailsService that is functioning more like the API to the database that you
 will be using. Then it'll look more like the HaikuService. 
 
+The above explanation is a little confused. UserService and UserDetailsService are different classes. The UserService is
+what is going to look more like HaikuService. But the UDS is *only* for logging in/authentication. It normally only
+has one method `loadByUsername` that Spring uses to get a specific user (technically UserDetails) from DB to compare with the login credentials.
+
+Maybe the reason for why UserDetails is needed isn't completely clear right now. But basically it's because the User class 
+can look in an infinite amount of ways right? The UserDetails interface is the standardized thing of how Spring wants to look at it
+at login. You have username, password, role, flags. That's pretty much it. There are probably more reasons as well, but for now
+it feels enough to just consider it two different things kind of, and it's good if they're decoupled a little bit.
+
 ---
 
 ## Thymeleaf and Rendering Data

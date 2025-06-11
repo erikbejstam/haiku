@@ -29,6 +29,10 @@ public class User {
         return username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public List<Haiku> getHaikus() {return haikus;}
 
     public Long getId() { return id; }
