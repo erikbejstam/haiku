@@ -17,7 +17,5 @@ public class UserService {
         return repo.findById(id);
     }
 
-
-
-
+    public Optional<User> findUserByUsername(String username) { return repo.findByUsername(username); }
 }
