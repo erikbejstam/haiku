@@ -48,7 +48,20 @@ Note: I had to manually encrypt password "p" and put it into the data.sql haikuu
 
 ### 12/6 
 
+#### First session
+
 I started by, just to get going, adding functionality in the menu fragment that switches between a login/logout button depending on whether the client is 
 logged in or not.
 
 Then I implemented some slightly nicer design, just so it's not so hard on the eyes.
+
+#### Second session
+
+I added a Postgres database. In the Java code, nothing much changed. I just had problems at first setting things up. But basically I 
+1. Installed Postgres
+2. Set it up as a service with systemctl
+2. Created a local postgres user on my machine
+3. Created a user *in* Postgres called haikuist, and generated a pw for him.
+4. When I tried logging in, it didn't work. I realized in the Postgres conf file some settings where set as authenticating the user with "ident" or something, which didn't work on my machine, so I had to set that to "md5" for password authentication instead.
+5. Then it worked, and my app could connect to the db.
+6. I had to set some specific settings in applications.properties for the data to be created on startup, but after a while it started working.

@@ -52,3 +52,8 @@ Note: You have to make getters on the fields in your classes that you want to ac
 I need to study the Thymeleaf syntax more. But basically, in your controller you have a Model parameter
 that you can do `addAttribute("user", user)` or the like on. When you then return the HTML page,
 that page has access to that object. You can then do stuff like `<div th:text="${user.username}"></div>` for instance.
+
+---
+
+## Database and Postgres
+

@@ -25,7 +25,7 @@
 
 [] Make sure your database structure and tables are set up properly.
 [] Make sure the Spring Hibernate syntax is proper
-[] Use Postgres
+[x] Use Postgres
 
 ## General direction
 
