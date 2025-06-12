@@ -25,7 +25,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { // Marco's WebSecurityConfigurerAdapter is deprecated. This seems to work in basically the same way.
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/css/**", "/jss/**", "/h2-console/**", "/").permitAll()
+                        .requestMatchers( "/static/**", "/css/**", "/js/**", "/h2-console/**", "/").permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) // TODO: Check out what to do with CSRF. Not really understading rn. But this is for enabling h2.
