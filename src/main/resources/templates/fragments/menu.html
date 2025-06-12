@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<html lang="eng" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <body>
 <div th:fragment="menu">
     <h2>Haiku</h2>
 
     <nav>
         <a href="/">Home</a>
-        <a href="/login">Login</a>
+
+        <div sec:authorize="isAnonymous()">
+            <form th:action="@{/login}" method="get">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div sec:authorize="isAuthenticated()">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
     </nav>
 </div>
 </body>
