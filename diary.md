@@ -44,3 +44,11 @@ This makes it very easy to deal with. So when someone puts in their credentials 
 the DB, and compares it. If they're the same, the user is now logged in. 
 
 Note: I had to manually encrypt password "p" and put it into the data.sql haikuuser entry. 
+
+
+### 12/6 
+
+I started by, just to get going, adding functionality in the menu fragment that switches between a login/logout button depending on whether the client is 
+logged in or not.
+
+Then I implemented some slightly nicer design, just so it's not so hard on the eyes.
