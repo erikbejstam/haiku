@@ -50,3 +50,5 @@ Note: I had to manually encrypt password "p" and put it into the data.sql haikuu
 
 I started by, just to get going, adding functionality in the menu fragment that switches between a login/logout button depending on whether the client is 
 logged in or not.
+
+Then I implemented some slightly nicer design, just so it's not so hard on the eyes.
