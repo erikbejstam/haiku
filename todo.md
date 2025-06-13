@@ -2,7 +2,7 @@
 
 ## Haiku Controller
 
- [x] Add delete handler  
+ [x] Add delete handler 
  [] Add update handler  
  
 ## User Controller
@@ -23,9 +23,18 @@
 
 ## Database setup
 
-[] Make sure your database structure and tables are set up properly.
-[] Make sure the Spring Hibernate syntax is proper
+[x] Make sure your database structure and tables are set up properly.
+[x] Make sure the Spring Hibernate syntax is proper
 [x] Use Postgres
+[] Practice some more Hibernate
+
+## Business Logic
+
+[] - Implement Haiku limitations
+
+## Frontend Design
+
+[] - Show user's haikus on their userpage
 
 ## General direction
 
@@ -34,3 +43,7 @@ Maybe just set up basic user functionality, and then focus on making a little MV
 
 Very basic security + security. Then, probably focus on making it look ok. But remember to keep learning
 **backend** things.
+
+## What is essential right now?
+
+[] 
