@@ -65,3 +65,14 @@ I added a Postgres database. In the Java code, nothing much changed. I just had 
 4. When I tried logging in, it didn't work. I realized in the Postgres conf file some settings where set as authenticating the user with "ident" or something, which didn't work on my machine, so I had to set that to "md5" for password authentication instead.
 5. Then it worked, and my app could connect to the db.
 6. I had to set some specific settings in applications.properties for the data to be created on startup, but after a while it started working.
+
+### 14/6
+
+Late night session, not super much done. I changed application.properties so it doesn't mess with the db data/drop all the tables
+upon start up. I just initialized the new schema and init data in psql in terminal instead.
+
+And about that: I wrote down the exact design of the database (which is very simple). I then made sure the Hibernate
+code seems fine. I want to practice more Hibernate though, but it seems to work pretty well for now.
+The details of the schema can be seen in `schema.sql`. I'll probably extend in the future, but for now it works fine.
+
+I also added the DB into IntelliJ. I don't really know yet what that lets me do but there's that.
