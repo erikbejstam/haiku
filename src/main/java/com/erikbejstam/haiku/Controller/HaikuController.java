@@ -1,7 +1,6 @@
 package com.erikbejstam.haiku.Controller;
 
 import com.erikbejstam.haiku.Model.Haiku;
-import com.erikbejstam.haiku.Repository.HaikuRepository;
 import com.erikbejstam.haiku.Service.HaikuService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
