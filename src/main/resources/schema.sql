@@ -8,10 +8,10 @@ CREATE TABLE haikuusers
 
 CREATE TABLE haikus
 (
-    id        INTEGER PRIMARY KEY,
-    author_id SERIAL       NOT NULL,
+    id        SERIAL PRIMARY KEY,
+    user_id INTEGER       NOT NULL,
     timestamp TIMESTAMP    NOT NULL,
     text      VARCHAR(255) NOT NULL,
-    FOREIGN KEY (author_id) REFERENCES haikuusers (id)
+    FOREIGN KEY (user_id) REFERENCES haikuusers (id)
         ON DELETE CASCADE /* In prod I think the haikus should not be deleted when the user is */
 );

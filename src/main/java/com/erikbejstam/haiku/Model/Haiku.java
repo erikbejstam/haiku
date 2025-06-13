@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name="haikus")
 public class Haiku {
 
     @Id
@@ -15,11 +16,11 @@ public class Haiku {
     @JoinColumn(name = "user_id")
     private User author;
 
-    @Column(length = 100, nullable = false)
+    @Column(nullable = false)
     private String text;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt;
+    private LocalDateTime timestamp;
 
     // empty constructor as is required by jpa
     public Haiku() {
@@ -28,7 +29,7 @@ public class Haiku {
     public Haiku(User author, String text) {
         this.author = author;
         this.text = text;
-        this.createdAt = LocalDateTime.now();
+        this.timestamp = LocalDateTime.now();
     }
 
     // Getters
