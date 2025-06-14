@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/haikus")
+@RequestMapping("/haikus")
 public class HaikuController {
 
     @Autowired
@@ -34,7 +34,7 @@ public class HaikuController {
         return ResponseEntity.ok(haiku);
     }
 
-    @PostMapping
+    @PostMapping("/post")
     public ResponseEntity<Haiku> create(@RequestBody @Valid Haiku haiku) {
         Haiku savedHaiku = service.save(haiku);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedHaiku);
