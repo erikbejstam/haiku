@@ -19,6 +19,7 @@
   </div>
 
   <form th:action="@{/haikus/post}" method="post" id="haiku-form">
+    <label for="haiku-text" hidden>Text input for new haiku</label>
     <textarea rows="3" cols="50" id="haiku-text" name="haiku-text"></textarea>
     <button type="submit" id="haiku-submit">Submit</button>
   </form>
