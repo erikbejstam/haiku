@@ -18,5 +18,21 @@
     </div>
   </div>
 
+  <form th:action="@{/post-haiku}" method="post" id="haiku-form">
+    <textarea rows="3" cols="50" id="haiku-text" name="haiku-text"></textarea>
+    <button type="submit" id="haiku-submit">Submit</button>
+  </form>
+
+<script>
+  document.getElementById("haiku-form").addEventListener("submit", function(e) {
+    const text = document.querySelector("#haiku-text").value.trim();
+    const lines = text.split(/\r?\n/); // regex. define regex within / /. \n is newline ofc. \r? means "match 1 or 0 occurrence of \r. this means the regex expr will match \r\n if \r is there, and \n if not.
+    if (lines.length !== 3) {
+      e.preventDefault();
+      alert("A haiku must be three lines long.");
+    }
+  });
+</script>
+
 </body>
 </html>
