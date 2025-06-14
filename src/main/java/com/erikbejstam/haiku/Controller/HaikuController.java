@@ -6,12 +6,13 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/haikus")
 public class HaikuController {
 
@@ -35,9 +36,9 @@ public class HaikuController {
     }
 
     @PostMapping("/post")
-    public ResponseEntity<Haiku> create(@RequestBody @Valid Haiku haiku) {
-        Haiku savedHaiku = service.save(haiku);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedHaiku);
+    public String create(@RequestParam String haikuText) {
+        System.out.println("Got Haiku: " + haikuText);
+        return "redirect:/";
     }
 
     @DeleteMapping("/{id}")
