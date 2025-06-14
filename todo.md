@@ -2,8 +2,9 @@
 
 ## Haiku Controller
 
- [x] Add delete handler 
- [] Add update handler  
+[x] Add delete handler
+[] Add update handler  
+[] Add basic create handler
  
 ## User Controller
 
@@ -12,7 +13,7 @@
 [] Add delete handler  
 [] Add create handler  
 
-## Page Controller
+## Main Controller
 
 [x] Add / handler
 [x] Add /user/{id} handler

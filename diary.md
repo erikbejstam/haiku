@@ -76,3 +76,11 @@ code seems fine. I want to practice more Hibernate though, but it seems to work 
 The details of the schema can be seen in `schema.sql`. I'll probably extend in the future, but for now it works fine.
 
 I also added the DB into IntelliJ. I don't really know yet what that lets me do but there's that.
+
+### 15/6 
+
+I added a form input on the main page. Then I added a basic controller, that redirects the user to home page, not saving the haiku rn.
+
+I renamed the controllers. So now I have no rest controllers, they're mvc controllers i think. I have the MainController that renders the pages basically, and then HaikuController and
+UserController for doing a CRUD action on one of the entities respectively, and then rendering one of the same pages. Example: MainController renders "/". HaikuController creates
+a haiku, saves it, and THEN renders "/".
