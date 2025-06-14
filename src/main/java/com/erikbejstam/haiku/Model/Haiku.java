@@ -1,6 +1,8 @@
 package com.erikbejstam.haiku.Model;
 
+import com.erikbejstam.haiku.Validation.ValidHaiku;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -16,10 +18,11 @@ public class Haiku {
     @JoinColumn(name = "user_id")
     private User author;
 
-    @Column(nullable = false)
+    @NotNull
+    @ValidHaiku
     private String text;
 
-    @Column(nullable = false)
+    @NotNull
     private LocalDateTime timestamp;
 
     // empty constructor as is required by jpa
