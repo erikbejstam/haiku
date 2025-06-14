@@ -2,7 +2,7 @@
 
 ## Haiku Controller
 
-[x] Add delete handler
+[] Add delete handler
 [] Add update handler  
 [] Add basic create handler
  
@@ -31,11 +31,12 @@
 
 ## Business Logic
 
-[] - Implement Haiku limitations
+[] Implement Haiku limitations
+[] Figure out how to print out the haikus without \n
 
 ## Frontend Design
 
-[] - Show user's haikus on their userpage
+[] Show user's haikus on their userpage
 
 ## General direction
 
