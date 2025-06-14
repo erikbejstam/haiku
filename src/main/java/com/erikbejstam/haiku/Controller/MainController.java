@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Controller
-public class PageController {
+public class MainController {
 
     private final HaikuService haikuService;
 
-    public PageController(HaikuService haikuService) {
+    public MainController(HaikuService haikuService) {
         this.haikuService = haikuService;
     }
 
