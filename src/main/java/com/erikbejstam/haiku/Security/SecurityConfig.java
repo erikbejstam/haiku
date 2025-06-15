@@ -30,7 +30,8 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) // TODO: Check out what to do with CSRF. Not really understading rn. But this is for enabling h2.
                 .headers(headers -> headers // TODO: Check this out aswell. This seems to also be needed for H2.
                         .frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
-                .formLogin(Customizer.withDefaults())
+                .formLogin(form -> form
+                        .defaultSuccessUrl("/", true))
                 .logout(Customizer.withDefaults());
 
         return http.build();
