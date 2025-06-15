@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -19,8 +20,8 @@ public class HaikuController {
     @Autowired
     private final HaikuService service;
 
-    public HaikuController(HaikuService service) {
-        this.service = service;
+    public HaikuController(HaikuService haikuService) {
+        this.service = haikuService;
     }
 
     @GetMapping
@@ -36,8 +37,13 @@ public class HaikuController {
     }
 
     @PostMapping("/post")
-    public String create(@RequestParam String haikuText) {
-        System.out.println("Got Haiku: " + haikuText);
+    public String create(@ModelAttribute @Valid Haiku haiku, BindingResult result) {
+        if (result.hasErrors()) {
+            return "redirect:/"; // maybe do something else later instead? maybe not
+        }
+
+        service.processHaiku(haiku);
+
         return "redirect:/";
     }
 
