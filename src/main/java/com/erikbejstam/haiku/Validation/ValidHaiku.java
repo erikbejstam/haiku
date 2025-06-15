@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = HaikuValidator.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidHaiku {
-    String message() default "The form of the haikku is invalid.";
+    String message() default "The form of the haiku is invalid.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
