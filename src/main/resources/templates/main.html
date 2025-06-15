@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>Main</title>
@@ -13,14 +13,14 @@
   <div id="haikus">
     <div th:each="haiku : ${haikus}" class="haiku">
       <div th:text="${haiku.text}">Haiku</div>
-      <a  th:href="@{/user/{id}(id=${haiku.author.id})}"
-          th:text="${haiku.author.username}">Author</a>
+      <a  th:href="@{/user/{id}(id=${haiku.user.id})}"
+          th:text="${haiku.user.username}">Author</a>
     </div>
   </div>
 
-  <form th:action="@{/haikus/post}" method="post" id="haiku-form">
+  <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
     <label for="haiku-text" hidden>Text input for new haiku</label>
-    <textarea rows="3" cols="50" id="haiku-text" name="haikuText"></textarea>
+    <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
     <button type="submit" id="haiku-submit">Submit</button>
   </form>
 
