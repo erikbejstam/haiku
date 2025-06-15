@@ -48,4 +48,4 @@ Very basic security + security. Then, probably focus on making it look ok. But r
 
 ## What is essential right now?
 
-[] 
+[] Refactor/clean up stuff related to validation. Slightly ugly now I think?
