@@ -15,33 +15,42 @@ public class Haiku {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User author;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @NotNull
     @ValidHaiku
     private String text;
 
-    @NotNull
     private LocalDateTime timestamp;
 
     // empty constructor as is required by jpa
     public Haiku() {
     }
 
-    public Haiku(User author, String text) {
-        this.author = author;
+    public Haiku(User user, String text) {
+        this.user = user;
         this.text = text;
         this.timestamp = LocalDateTime.now();
     }
 
     // Getters
 
-    public User getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
     public String getText() {
         return text;
     }
+
+    // Setters
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
+
+    public void setUser(User user) { this.user = user; }
 }
