@@ -84,3 +84,15 @@ I added a form input on the main page. Then I added a basic controller, that red
 I renamed the controllers. So now I have no rest controllers, they're mvc controllers i think. I have the MainController that renders the pages basically, and then HaikuController and
 UserController for doing a CRUD action on one of the entities respectively, and then rendering one of the same pages. Example: MainController renders "/". HaikuController creates
 a haiku, saves it, and THEN renders "/".
+
+### 16/6
+
+I've implemented the controller function and functionality for adding a haiku more completely now. I don't know if I'm following best practices at all, and I'm not 100% sure
+I've done everything right everywhere haha. I should probably go back and look at this later. What I do now:
+
+The controller function receives the form data, and I have a @Valid check only on haiku.text (that is the only thing that comes from the from).
+Then the controller calls haikuService.process, which in turns uses authentication context + userService to get the right (currently logged in user) form DB.
+Ok, and then it adds that user + timestamp to the haiku object, that is now complete. Then it uses haikuService.save() to save it to db.
+
+This all seems to work. But I have to have some more validation, and just make sure everything is properly written. One weird thing I immediately see, is there is a difference
+between \n and "down arrow" symbol in the database. Look in the database window in IntelliJ and you'll see. What's that about??
