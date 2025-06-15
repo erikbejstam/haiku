@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class HaikuValidator implements ConstraintValidator<ValidHaiku, String> {
     @Override
     public boolean isValid(String text, ConstraintValidatorContext context) {
-        Pattern pattern = Pattern.compile("\n");
+        Pattern pattern = Pattern.compile("\r?\n");
         Matcher matcher = pattern.matcher(text);
         int matches = 0;
 
