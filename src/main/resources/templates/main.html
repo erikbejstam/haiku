@@ -6,23 +6,35 @@
   <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
-  <div th:replace="fragments/menu :: menu"></div>
+<!--  <div th:replace="fragments/menu :: menu"></div>-->
+  <div class="main-container">
+    <div class="top-bar">
+      <div class="logo">Haikuist</div>
 
-  <h1>Latest Haiku</h1>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        </svg>
+      </button>
 
-  <div id="haikus">
-    <div th:each="haiku : ${haikus}" class="haiku">
-      <div th:text="${haiku.text}">Haiku</div>
-      <a  th:href="@{/user/{id}(id=${haiku.user.id})}"
-          th:text="${haiku.user.username}">Author</a>
     </div>
-  </div>
 
-  <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
-    <label for="haiku-text" hidden>Text input for new haiku</label>
-    <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
-    <button type="submit" id="haiku-submit">Submit</button>
-  </form>
+    <div class="haiku-container">
+      <div id="haikus">
+        <div th:each="haiku : ${haikus}" class="haiku">
+          <div th:text="${haiku.text}">Haiku</div>
+          <a  th:href="@{/user/{id}(id=${haiku.user.id})}"
+              th:text="${haiku.user.username}">Author</a>
+        </div>
+      </div>
+    </div>
+
+    <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
+      <label for="haiku-text" hidden>Text input for new haiku</label>
+      <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
+      <button type="submit" id="haiku-submit">Submit</button>
+    </form>
+  </div>
 
 <script>
   document.getElementById("haiku-form").addEventListener("submit", function(e) { //note, getElementById doesn't work when client logged out, since haiku-form isn't displayed then.
