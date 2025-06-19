@@ -14,7 +14,7 @@ public class User {
     private String username;
     private String password;
     private String email;
-    @OneToMany(mappedBy="author")
+    @OneToMany(mappedBy="user")
     private List<Haiku> haikus;
 
     public User(String username, String password, String email) {
