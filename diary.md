@@ -96,3 +96,10 @@ Ok, and then it adds that user + timestamp to the haiku object, that is now comp
 
 This all seems to work. But I have to have some more validation, and just make sure everything is properly written. One weird thing I immediately see, is there is a difference
 between \n and "down arrow" symbol in the database. Look in the database window in IntelliJ and you'll see. What's that about??
+
+### 19/6
+
+Added the background image. Note: I have to fix, or at least mull over, a problem. The html body element does not cover the whole viewport right now, which maybe it should.
+Because the background image, that is in the body element does not cover the whole screen right now, of that reason. I did an ugly solution *for now*, which is
+that is made the background color the same color as the background image, so it looks as if the whole "background" is one whole image/background elemenet or whatever.
+Maybe the will always work, I'm not sure. I just need to think that through. It's been added to the todo-list.
