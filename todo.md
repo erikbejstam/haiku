@@ -38,6 +38,7 @@
 
 [] Show user's haikus on their userpage
 [] Fix html body size. Right now it's now the full viewport size, making the background image behave not ideal.
+[] Fix HTML layout with flexbox etc, on main page to begin with.
 
 ## General direction
 

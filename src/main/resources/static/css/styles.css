@@ -3,7 +3,7 @@ body {
     background-image: url("../images/haiku-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    /*background-position: center;*/ /* I think maybe this fucks up the height? */
     background-color: #F8DCB0;
     color: #2a4d69;
     font-family: "Georgia", serif;
