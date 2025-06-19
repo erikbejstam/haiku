@@ -1,6 +1,10 @@
+/* I have to think about how to handle the size of background. Because right now it's now the full viewport size because I added padding. That makes background image not cover the whole viewport..*/
 body {
     background-image: url("../images/haiku-background.svg");
-    background-color: #f5f0e6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F8DCB0;
     color: #2a4d69;
     font-family: "Georgia", serif;
     margin: 0;
