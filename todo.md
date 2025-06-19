@@ -37,6 +37,7 @@
 ## Frontend Design
 
 [] Show user's haikus on their userpage
+[] Fix html body size. Right now it's now the full viewport size, making the background image behave not ideal.
 
 ## General direction
 
