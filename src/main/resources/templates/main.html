@@ -25,7 +25,7 @@
   </form>
 
 <script>
-  document.getElementById("haiku-form").addEventListener("submit", function(e) {
+  document.getElementById("haiku-form").addEventListener("submit", function(e) { //note, getElementById doesn't work when client logged out, since haiku-form isn't displayed then.
     const text = document.querySelector("#haiku-text").value.trim();
     const lines = text.split(/\r?\n/); // regex. define regex within / /. \n is newline ofc. \r? means "match 1 or 0 occurrence of \r. this means the regex expr will match \r\n if \r is there, and \n if not.
     if (lines.length !== 3) {
