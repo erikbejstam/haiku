@@ -100,6 +100,14 @@ between \n and "down arrow" symbol in the database. Look in the database window 
 ### 19/6
 
 Added the background image. Note: I have to fix, or at least mull over, a problem. The html body element does not cover the whole viewport right now, which maybe it should.
-Because the background image, that is in the body element does not cover the whole screen right now, of that reason. I did an ugly solution *for now*, which is
+Because the background image, that is in the body element, does not cover the whole screen right now, of that reason. I did an ugly solution *for now*, which is
 that is made the background color the same color as the background image, so it looks as if the whole "background" is one whole image/background elemenet or whatever.
 Maybe the will always work, I'm not sure. I just need to think that through. It's been added to the todo-list.
+
+### 26/6
+
+Added docker-compose for running Postgres DB in container. I think it'll be very beneficial to have it containerized.
+I have to make sure to add an env file and put in the proper variables. I think then
+I should be able to spin up a postgres db in the container. I just want to configure the
+environment so that I can develop on any machine, preferably. 
+
