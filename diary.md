@@ -111,3 +111,17 @@ I have to make sure to add an env file and put in the proper variables. I think 
 I should be able to spin up a postgres db in the container. I just want to configure the
 environment so that I can develop on any machine, preferably. 
 
+Ok, it doesn't seem that messy to set this up. You basically don't have to chang anything
+in the Spring config, like the application.properties or anything. 
+Since in your docker-compose you map the container running the db to 5432, it will 
+work not changing anything basically. You just have to shut down the "normal" postgres DB running at that address.
+So just 
+1) make sure you have an env file (preferably when you start the db, so it auto-sets up your db). 
+In the env file you have db name, user, pw.
+2) Then make sure you have exported a system env variable for the password that application.properties can use.
+3) Start the container with `docker-compose up -d` (detached). 
+
+... and the container should be up and running and you should be able to conenct to it i think?
+Try at home. Windows is super bad and i didn't have the patience to fix everything right now at work.
+
+
