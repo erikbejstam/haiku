@@ -2,43 +2,48 @@
 
 ## Haiku Controller
 
-[] Add delete handler
-[] Add update handler  
-[] Add basic create handler
+- [ ] Add delete handler
+- [ ] Add update handler  
+- [ ] Add basic create handler
  
 ## User Controller
 
-[] Add update handler  
-[] Add read handler  
-[] Add delete handler  
-[] Add create handler  
+- [ ] Add update handler  
+- [ ] Add read handler  
+- [ ] Add delete handler  
+- [ ] Add create handler  
 
 ## Main Controller
 
-[x] Add / handler
-[x] Add /user/{id} handler
+- [x] Add / handler
+- [x] Add /user/{id} handler
 
 ## Security
 
-[x] Allow non-authenticated clients only on /
+- [x] Allow non-authenticated clients only on /
 
 ## Database setup
 
-[x] Make sure your database structure and tables are set up properly.
-[x] Make sure the Spring Hibernate syntax is proper
-[x] Use Postgres
-[] Practice some more Hibernate
+- [x] Make sure your database structure and tables are set up properly.
+- [x] Make sure the Spring Hibernate syntax is proper
+- [x] Use Postgres
+- [ ] Practice some more Hibernate
 
 ## Business Logic
 
-[] Implement Haiku limitations
-[] Figure out how to print out the haikus without \n
+- [ ] Implement Haiku limitations
+- [ ] Figure out how to print out the haikus without \n
 
 ## Frontend Design
 
-[] Show user's haikus on their userpage
-[] Fix html body size. Right now it's now the full viewport size, making the background image behave not ideal.
-[] Fix HTML layout with flexbox etc, on main page to begin with.
+- [ ] Show user's haikus on their userpage
+- [ ] Fix html body size. Right now it's now the full viewport size, making the background image behave not ideal.
+- [ ] Fix HTML layout with flexbox etc, on main page to begin with.
+- [ ] Design menu button
+- [ ] Make menu button clickable and show menu items
+- [ ] Design haiku
+- [ ] Make only one haiku visible at a time
+- [ ] Design logo
 
 ## General direction
 
@@ -50,4 +55,4 @@ Very basic security + security. Then, probably focus on making it look ok. But r
 
 ## What is essential right now?
 
-[] Refactor/clean up stuff related to validation. Slightly ugly now I think?
+- [ ] Refactor/clean up stuff related to validation. Slightly ugly now I think?
