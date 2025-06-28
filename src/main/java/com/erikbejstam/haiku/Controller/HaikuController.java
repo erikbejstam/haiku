@@ -42,6 +42,8 @@ public class HaikuController {
             return "redirect:/"; // maybe do something else later instead? maybe not
         }
 
+        haiku.setText(normalizeText(haiku.getText()));
+
         service.processHaiku(haiku);
 
         return "redirect:/";
@@ -52,6 +54,13 @@ public class HaikuController {
         Haiku haiku = service.findById(id);
         if (haiku == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         service.delete(id);
+    }
+
+    // Helper functions
+
+    private String normalizeText(String haikuText) {
+        if (haikuText == null) return null;
+        return haikuText.replace("\r", "");
     }
 }
 
