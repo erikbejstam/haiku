@@ -7,7 +7,7 @@ body {
     background-repeat: no-repeat;
     /*background-position: center;*/ /* I think maybe this fucks up the height? */
     background-color: #F8DCB0;
-    color: #2a4d69;
+    color: #684037;
     font-family: "Georgia", serif;
     margin: 0;
     padding: 20px;
@@ -55,10 +55,10 @@ to the start, and then just do padding 36vh to get it centered.
     flex-grow: 1;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     height: 33vh;
     width: auto;
-    padding-top: 36vh;
+    padding-top: 30vh;
 }
 
 h1, h2 {
@@ -67,33 +67,42 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-nav a, nav button {
-    color: #2a4d69;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0.3rem 0.6rem;
-    transition: color 0.3s ease;
-    font-family: "Georgia", serif;
-}
-
-nav a:hover, nav button:hover {
-    color: #4a6fa5;
-}
-
 /* || The style of individual haiku */
 
 .haiku {
-    background-color: #e9e4d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 8px;
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     font-style: italic;
     font-size: 1.1rem;
     white-space: pre-line;
+}
+
+/* Text styling */
+
+.haiku-text {
+    font-size: 3em;
+}
+
+/* Author link styling */
+
+.haiku-author {
+    padding-top: 1em;
+    text-decoration: none;
+    opacity: 0.3;
+}
+
+.haiku-author:visited {
+    color:inherit;
+}
+
+.haiku-author:hover {
+    color: #9e4a30;
+    opacity: 1;
 }
 
 .haiku.visible {
@@ -102,16 +111,4 @@ nav a:hover, nav button:hover {
 
 .haiku.hidden {
     display: none;
-}
-
-a.author-link {
-    color: #1c3a63;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-top: 0.5rem;
-    display: inline-block;
-}
-
-a.author-link:hover {
-    color: #3b5998;
 }
