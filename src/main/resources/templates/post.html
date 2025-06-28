@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Haiku</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+
+<div id="main-container">
+    <div id="top-bar">
+        <a id="logo" th:href="@{/}">
+            Moss
+        </a>
+
+        <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
+        <label for="haiku-text" hidden>Text input for new haiku</label>
+        <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
+        <button type="submit" id="haiku-submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
