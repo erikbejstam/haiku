@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>Main</title>
-  <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
 <!--  <div th:replace="fragments/menu :: menu"></div>-->
-  <div class="main-container">
-    <div class="top-bar">
-      <div class="logo">Haikuist</div>
+<div id="main-container">
+    <div id="top-bar">
+        <div class="logo">Moss</div> <!-- TODO: Link to main page -->
 
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        </svg>
-      </button>
+        <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
 
     </div>
 
@@ -35,21 +34,21 @@
     </div>
 
     <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
-      <label for="haiku-text" hidden>Text input for new haiku</label>
-      <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
-      <button type="submit" id="haiku-submit">Submit</button>
+        <label for="haiku-text" hidden>Text input for new haiku</label>
+        <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
+        <button type="submit" id="haiku-submit">Submit</button>
     </form>
-  </div>
+</div>
 
 <script>
-  document.getElementById("haiku-form").addEventListener("submit", function(e) { //note, getElementById doesn't work when client logged out, since haiku-form isn't displayed then.
-    const text = document.querySelector("#haiku-text").value.trim();
-    const lines = text.split(/\r?\n/); // regex. define regex within / /. \n is newline ofc. \r? means "match 1 or 0 occurrence of \r. this means the regex expr will match \r\n if \r is there, and \n if not.
-    if (lines.length !== 3) {
-      e.preventDefault();
-      alert("A haiku must be three lines long.");
-    }
-  });
+    document.getElementById("haiku-form").addEventListener("submit", function (e) { //note, getElementById doesn't work when client logged out, since haiku-form isn't displayed then.
+        const text = document.querySelector("#haiku-text").value.trim();
+        const lines = text.split(/\r?\n/); // regex. define regex within / /. \n is newline ofc. \r? means "match 1 or 0 occurrence of \r. this means the regex expr will match \r\n if \r is there, and \n if not.
+        if (lines.length !== 3) {
+            e.preventDefault();
+            alert("A haiku must be three lines long.");
+        }
+    });
 </script>
 
 </body>
