@@ -11,6 +11,11 @@ body {
     font-family: "Georgia", serif;
     margin: 0;
     padding: 20px;
+
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #main-container {
