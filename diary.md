@@ -124,4 +124,14 @@ In the env file you have db name, user, pw.
 ... and the container should be up and running and you should be able to conenct to it i think?
 Try at home. Windows is super bad and i didn't have the patience to fix everything right now at work.
 
+### 28/6 
 
+Today it's all about UI. I've started by trying to figure out how the actual poem on the home page should be rendered.
+I will have the controller serve a bunch of poems still, but all of them will be hidden except the first one
+(using Thymeleaf - you can include iterStat which gives iteration data when you're doing a loop, like index).
+
+So I've solved the above I think. I've also centered the poem. It used padding to center it, because if I did align-items: center ofc
+it centered it within the flexbox, but that results in it being slightly below center of the page since the flexbox isn't the entire page.
+This will do for now.
+
+I will now have to figure out how to display the text in a nicer way, and also make the menu button show its items in a nice way.
