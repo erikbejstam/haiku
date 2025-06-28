@@ -16,10 +16,12 @@
             Moss
         </a>
 
-        <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-        </button>
+        <button id="menu-button" aria-label="Toggle menu" aria-haspopup="true" aria-expanded="false"></button>
+
+        <div id="menu">
+            <button class="menu-item">My page</button>
+            <button class="menu-item">New haiku</button>
+        </div>
 
     </div>
 
@@ -48,6 +50,7 @@
 
 </div>
 
+<script type="text/javascript" src="/js/scripts.js" defer></script>
 <script>
     document.getElementById("haiku-form").addEventListener("submit", function (e) { //note, getElementById doesn't work when client logged out, since haiku-form isn't displayed then.
         const text = document.querySelector("#haiku-text").value.trim();
