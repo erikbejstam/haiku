@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Optional;
 
 @Controller()
-@RequestMapping("/users")
+@RequestMapping("/users") // TODO: I don't know if this should be "users" or "user"
 public class UserController {
 
     private final UserService userService;

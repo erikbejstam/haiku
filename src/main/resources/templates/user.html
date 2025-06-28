@@ -6,9 +6,19 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
-    <div th:replace="fragments/menu :: menu"></div>
+<div id="top-bar">
+    <a id="logo" th:href="@{/}">
+        Moss
+    </a>
 
-    <h2 th:text="'This is the user page of ' + ${user.username}">This is the user page of [username]</h2> <!-- Note: I had problems with this at first. You have to create getters for the value you want to access ofc!! -->
+    <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+    </button>
+
+</div>
+
+<h2 th:text="'This is the user page of ' + ${user.username}">This is the user page of [username]</h2> <!-- Note: I had problems with this at first. You have to create getters for the value you want to access ofc!! -->
 
 </body>
 </html>

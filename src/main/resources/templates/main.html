@@ -26,8 +26,8 @@
 
                 <div th:utext="${haiku.text}">Haiku</div> <!-- utext = Unescaped text, inserting a newline instead of literally "<br/>" -->
 
-                <a th:href="@{/user/{id}(id=${haiku.user.id})}"
-                   th:text="${haiku.user.username}">Author</a>
+                <a class="haiku-author" th:href="@{/users/{id}(id=${haiku.user.id})}"
+                   th:text="'by ' + ${haiku.user.username}">Author</a>
 
             </div>
         </div>
