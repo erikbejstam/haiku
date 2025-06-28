@@ -29,6 +29,20 @@ body {
     height: 60px;                   /* fix height as needed */
 }
 
+#logo {
+    text-decoration: none;
+    font-size: 2em;
+    font-style: italic;
+}
+
+#logo:visited {
+    color: inherit;
+}
+
+#logo:hover {
+    color: #9e4a30;
+}
+
 /* || The container in the middle, containing haiku */
 
 /*
