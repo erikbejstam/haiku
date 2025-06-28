@@ -32,7 +32,7 @@
 ## Business Logic
 
 - [ ] Implement Haiku limitations
-- [ ] Figure out how to print out the haikus without \n
+- [x] Figure out how to print out the haikus without \n
 
 ## Frontend Design
 

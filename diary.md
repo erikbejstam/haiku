@@ -126,6 +126,8 @@ Try at home. Windows is super bad and i didn't have the patience to fix everythi
 
 ### 28/6 
 
+#### First session
+
 Today it's all about UI. I've started by trying to figure out how the actual poem on the home page should be rendered.
 I will have the controller serve a bunch of poems still, but all of them will be hidden except the first one
 (using Thymeleaf - you can include iterStat which gives iteration data when you're doing a loop, like index).
@@ -135,3 +137,9 @@ it centered it within the flexbox, but that results in it being slightly below c
 This will do for now.
 
 I will now have to figure out how to display the text in a nicer way, and also make the menu button show its items in a nice way.
+
+#### Second session 
+
+I think I managed to solve the problem of the newlines, which basically is just getting out of the way. If you just 
+write three line, like you should, in the form, and then let the formatting of those newlines stay as they are, everything
+will appear just fine. 

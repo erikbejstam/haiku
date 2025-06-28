@@ -24,7 +24,7 @@
                  th:each="haiku, iterStat : ${haikus}"
                  th:classappend="${iterStat.index == 0} ? 'visible' : 'hidden'">
 
-                <div th:text="${haiku.text}">Haiku</div>
+                <div th:utext="${haiku.text}">Haiku</div> <!-- utext = Unescaped text, inserting a newline instead of literally "<br/>" -->
 
                 <a th:href="@{/user/{id}(id=${haiku.user.id})}"
                    th:text="${haiku.user.username}">Author</a>
