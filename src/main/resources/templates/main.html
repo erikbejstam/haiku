@@ -20,13 +20,18 @@
     </div>
 
     <div class="haiku-container">
-      <div id="haikus">
-        <div th:each="haiku : ${haikus}" class="haiku">
-          <div th:text="${haiku.text}">Haiku</div>
-          <a  th:href="@{/user/{id}(id=${haiku.user.id})}"
-              th:text="${haiku.user.username}">Author</a>
+        <div id="haikus">
+            <div class="haiku"
+                 th:each="haiku, iterStat : ${haikus}"
+                 th:classappend="${iterStat.index == 0} ? 'visible' : 'hidden'">
+
+                <div th:text="${haiku.text}">Haiku</div>
+
+                <a th:href="@{/user/{id}(id=${haiku.user.id})}"
+                   th:text="${haiku.user.username}">Author</a>
+
+            </div>
         </div>
-      </div>
     </div>
 
     <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
