@@ -1,4 +1,6 @@
 /* I have to think about how to handle the size of background. Because right now it's now the full viewport size because I added padding. That makes background image not cover the whole viewport..*/
+
+/* The style and format of the body and main-container of page. */
 body {
     background-image: url("../images/haiku-background.svg");
     background-size: cover;
@@ -11,13 +13,15 @@ body {
     padding: 20px;
 }
 
-.main-container {
+#main-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.top-bar {
+/* || The top section of the web page - logo and menu button */
+
+#top-bar {
     display: flex;
     justify-content: space-between; /* left and right edges */
     align-items: center;             /* vertical centering */
@@ -25,10 +29,22 @@ body {
     height: 60px;                   /* fix height as needed */
 }
 
+/* || The container in the middle, containing haiku */
+
+/*
+Notes:
+- I wasn't sure what the best way of centering the haiku was. So now, I justify-content the haiku
+to the start, and then just do padding 36vh to get it centered.
+*/
 .haiku-container {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 33vh;
+    width: auto;
+    padding-top: 36vh;
 }
 
 h1, h2 {
@@ -53,6 +69,8 @@ nav a:hover, nav button:hover {
     color: #4a6fa5;
 }
 
+/* || The style of individual haiku */
+
 .haiku {
     background-color: #e9e4d4;
     border-radius: 8px;
@@ -61,6 +79,14 @@ nav a:hover, nav button:hover {
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     font-style: italic;
     font-size: 1.1rem;
+}
+
+.haiku.visible {
+
+}
+
+.haiku.hidden {
+    display: none;
 }
 
 a.author-link {
