@@ -122,6 +122,9 @@ h1, h2 {
 
 .haiku-text {
     font-size: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 0.1em solid rgba(158, 111, 100, 0.27);
 }
 
 /* Author link styling */
