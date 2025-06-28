@@ -9,7 +9,9 @@
 <!--  <div th:replace="fragments/menu :: menu"></div>-->
 <div id="main-container">
     <div id="top-bar">
-        <div class="logo">Moss</div> <!-- TODO: Link to main page -->
+        <a id="logo" th:href="@{/}">
+            Moss
+        </a>
 
         <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
@@ -24,7 +26,10 @@
                  th:each="haiku, iterStat : ${haikus}"
                  th:classappend="${iterStat.index == 0} ? 'visible' : 'hidden'">
 
-                <div th:utext="${haiku.text}">Haiku</div> <!-- utext = Unescaped text, inserting a newline instead of literally "<br/>" -->
+                <div class="haiku-text"
+                     th:utext="${haiku.text}"> <!-- utext = Unescaped text, inserting a newline instead of literally "<br/>" -->
+                    Haiku
+                </div>
 
                 <a class="haiku-author" th:href="@{/users/{id}(id=${haiku.user.id})}"
                    th:text="'by ' + ${haiku.user.username}">Author</a>
@@ -33,11 +38,11 @@
         </div>
     </div>
 
-    <form th:action="@{/haikus/post}" method="post" id="haiku-form" sec:authorize="isAuthenticated()">
-        <label for="haiku-text" hidden>Text input for new haiku</label>
-        <textarea rows="3" cols="50" id="haiku-text" name="text"></textarea>
-        <button type="submit" id="haiku-submit">Submit</button>
-    </form>
+    <div id="arrows">
+        <span>Up arrow</span>
+        <span>Down arrow</span>
+    </div>
+
 </div>
 
 <script>
