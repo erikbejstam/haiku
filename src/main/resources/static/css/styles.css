@@ -54,9 +54,9 @@ body {
 #menu-button {
     width: 50px;
     height: 50px;
-    background: url('../icons/menu-strawberry-svgrepo-com.svg');
-    background-size: contain;
+    background: url('/icons/menu-strawberry-svgrepo-com.svg');
     background-repeat: no-repeat;
+    background-size: contain;
     border: none;
     cursor: pointer;
 }
