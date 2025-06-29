@@ -25,4 +25,9 @@ public class MainController {
 
         return "main";
     }
+
+    @GetMapping("/post")
+    public String post() {
+        return "post";
+    }
 }
