@@ -38,11 +38,11 @@
 
 - [ ] Show user's haikus on their userpage
 - [ ] Fix html body size. Right now it's now the full viewport size, making the background image behave not ideal.
-- [ ] Fix HTML layout with flexbox etc, on main page to begin with.
+- [x] Fix HTML layout with flexbox etc, on main page to begin with.
 - [ ] Design menu button
-- [ ] Make menu button clickable and show menu items
-- [ ] Design haiku
-- [ ] Make only one haiku visible at a time
+- [x] Make menu button clickable and show menu items
+- [x] Design haiku
+- [x] Make only one haiku visible at a time
 - [ ] Design logo
 
 ## General direction
