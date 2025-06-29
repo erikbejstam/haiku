@@ -151,3 +151,17 @@ still need a lot of more work.
 I then added the menu button, and started working on making it work correctly. 
 I added a script to make it toggelable, but the menu items still have a default look, and the links don't work.
 Otherwise I'm pretty happy with today - I think the design significantly improved. GG
+
+### 29/6
+
+#### First session
+
+Continued on design path. Front page looks pretty nice, I'm happy with it for now. Presentable. The functionality is not there, and I probably want to 
+fix a lot of details (everything from the background to CSS best practices to color schemes etc). But the initial impression of entering the front page
+is pretty pleasant, I think. I decided to inline the SVGs since there aren't that many of them, and it just felt easier implementing on-hover color changes that way.
+I added the arrow SVGs. I still feel like I should take a good hard look at all the CSS in my project, but maybe that's for a later time :) It always becomes a bit 
+messy when you don't have the full plan/layout in your head and you just add stuff on top of each other. For example the menu, which for now has absolute positioning.
+It's probably better if I make it relative with a flexbox etc. I think it's going to make designing easier when I'm making the design responsive etc. 
+
+I think I'm happy enough with the raw design of the front page to add a little screenshot of it to the readme, just so visitors get an initial presentation of what the
+website is about and what it looks like.
