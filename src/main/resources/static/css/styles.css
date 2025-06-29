@@ -146,10 +146,6 @@ h1, h2 {
     opacity: 1;
 }
 
-.haiku.visible {
-
-}
-
 .haiku.hidden {
     display: none;
 }
