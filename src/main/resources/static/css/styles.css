@@ -52,13 +52,14 @@ body {
 /* Menu button */
 
 #menu-button {
-    width: 50px;
-    height: 50px;
-    background: url('/icons/menu-strawberry-svgrepo-com.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
     border: none;
     cursor: pointer;
+    background: transparent;
+    color: #976b62;
+}
+
+#menu-button:hover {
+    color: #684037;
 }
 
 /* Menu */
@@ -88,7 +89,7 @@ to the start, and then just do padding 36vh to get it centered.
 */
 .haiku-container {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
