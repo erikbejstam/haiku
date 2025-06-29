@@ -95,6 +95,7 @@ to the start, and then just do padding 36vh to get it centered.
     height: 33vh;
     width: auto;
     padding-top: 30vh;
+    padding-bottom: 10vh;
 }
 
 h1, h2 {
@@ -150,4 +151,23 @@ h1, h2 {
 
 .haiku.hidden {
     display: none;
+}
+
+/* || Arrows */
+
+#arrows {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#arrows > * {
+    color: #b68d85;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+#up-arrow:hover, #down-arrow:hover {
+    color: #684037;
 }

@@ -16,7 +16,15 @@
             Moss
         </a>
 
-        <button id="menu-button" aria-label="Toggle menu" aria-haspopup="true" aria-expanded="false"></button>
+        <button id="menu-button" aria-label="Toggle menu" aria-haspopup="true" aria-expanded="false">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g id="style=fill">
+                    <g id="menu-strawberry">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 1.25C3.93629 1.25 1.25 3.93629 1.25 7.25V16.75C1.25 20.0637 3.93629 22.75 7.25 22.75H16.75C20.0637 22.75 22.75 20.0637 22.75 16.75V7.25C22.75 3.93629 20.0637 1.25 16.75 1.25H7.25ZM4.84615 7C4.51691 7 4.25 7.33579 4.25 7.75C4.25 8.16421 4.51691 8.5 4.84615 8.5H19.1538C19.4831 8.5 19.75 8.16421 19.75 7.75C19.75 7.33579 19.4831 7 19.1538 7H4.84615ZM6.25 12.25C6.25 11.8358 6.58579 11.5 7 11.5H17C17.4142 11.5 17.75 11.8358 17.75 12.25C17.75 12.6642 17.4142 13 17 13H7C6.58579 13 6.25 12.6642 6.25 12.25ZM9 16C8.58579 16 8.25 16.3358 8.25 16.75C8.25 17.1642 8.58579 17.5 9 17.5H15C15.4142 17.5 15.75 17.1642 15.75 16.75C15.75 16.3358 15.4142 16 15 16H9Z"/>
+                    </g>
+                </g>
+            </svg>
+        </button>
 
         <div id="menu">
             <button class="menu-item">My page</button>
@@ -44,9 +52,31 @@
     </div>
 
     <div id="arrows">
-        <span>Up arrow</span>
-        <span>Down arrow</span>
+        <button id="up-arrow" aria-label="Up arrow">
+            <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <mask id="up-arrow-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                        <rect width="100" height="100" fill="white"/>
+                        <path fill="black" d="M50 30 L35 55 H45 V70 H55 V55 H65 L50 30 Z"/>
+                    </mask>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="currentColor" mask="url(#up-arrow-mask)"/>
+            </svg>
+        </button>
+
+        <button id="down-arrow" aria-label="Down arrow">
+            <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <mask id="down-arrow-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                        <rect width="100" height="100" fill="white"/>
+                        <path fill="black" d="M50 70 L65 45 H55 V30 H45 V45 H35 L50 70 Z"/>
+                    </mask>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="currentColor" mask="url(#down-arrow-mask)"/>
+            </svg>
+        </button>
     </div>
+
 
 </div>
 
