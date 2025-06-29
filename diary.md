@@ -143,3 +143,11 @@ I will now have to figure out how to display the text in a nicer way, and also m
 I think I managed to solve the problem of the newlines, which basically is just getting out of the way. If you just 
 write three line, like you should, in the form, and then let the formatting of those newlines stay as they are, everything
 will appear just fine. 
+
+#### Third session
+
+Updated the design of the Haiku. I think it looks ok now. Updated design a little it of /post and /users/{id}, but those
+still need a lot of more work. 
+I then added the menu button, and started working on making it work correctly. 
+I added a script to make it toggelable, but the menu items still have a default look, and the links don't work.
+Otherwise I'm pretty happy with today - I think the design significantly improved. GG
