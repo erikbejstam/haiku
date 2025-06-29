@@ -45,7 +45,7 @@
 - [x] Make only one haiku visible at a time
 - [ ] Design logo
 - [ ] Should prooobably make the design more responsive by make the menu have relative position instead of floating above haiku-container
-- [ ] Different arrow designs? A bit "heavy" now?
+- [ ] Different arrow designs? A bit "heavy" now? (Idea: Just some type of arrows, and then on hover a little circle or something quickly fades in around them)
 - [ ] Find the perfect font?
 
 ## General direction

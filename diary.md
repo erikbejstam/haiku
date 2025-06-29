@@ -165,3 +165,11 @@ It's probably better if I make it relative with a flexbox etc. I think it's goin
 
 I think I'm happy enough with the raw design of the front page to add a little screenshot of it to the readme, just so visitors get an initial presentation of what the
 website is about and what it looks like.
+
+#### Second session
+
+Added the functionality for navigating between haiku. Works good. Tried to add animation but didn't work, will have to fix that later. Apparently an element can't fade in 
+if it has `display: none` which i had for the hidden haiku. So I don't know if i have to have a temporary class maybe, that removes that property, but still keeps it invisible. We'll see.
+
+I'm also unsure of the font. I really like Bodoni Moda, but it's a bit hard to read unfortunately. I tried to find something else, but didn't manage to find anything 
+that looked nice. I'll have to find something better later.
