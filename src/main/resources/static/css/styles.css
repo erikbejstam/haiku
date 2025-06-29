@@ -14,7 +14,7 @@ body {
     font-family: "Bodoni Moda", serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
+    font-style: italic;
 }
 
 #main-container {
@@ -37,8 +37,11 @@ body {
 
 #logo {
     text-decoration: none;
-    font-size: 2em;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: italic;
+    font-size: 2em;
 }
 
 #logo:visited {
@@ -115,9 +118,20 @@ h1, h2 {
     border-radius: 8px;
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-    font-style: italic;
     font-size: 1.1rem;
     white-space: pre-line;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.haiku.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.haiku.hidden {
+    display: none;
+    pointer-events: none;
 }
 
 /* Text styling */
@@ -144,10 +158,6 @@ h1, h2 {
 .haiku-author:hover {
     color: #9e4a30;
     opacity: 1;
-}
-
-.haiku.hidden {
-    display: none;
 }
 
 /* || Arrows */
