@@ -28,6 +28,7 @@
 - [x] Make sure the Spring Hibernate syntax is proper
 - [x] Use Postgres
 - [ ] Practice some more Hibernate
+- [ ] Run db in container
 
 ## Business Logic
 

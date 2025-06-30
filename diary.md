@@ -1,6 +1,6 @@
 # Little diary
 
-I'll be writing in this file every time I've been working on the project, just to that I can remember when i pick it up again what it was I actually did last time, and why I did it.
+I'll be writing in this file every time I've been working on the project, just to that I can remember when I pick it up again what it was I actually did last time, and why I did it.
 
 ### 10/6
 
@@ -9,7 +9,7 @@ Today I implemented the User-part of the model, although very minimally. It is n
 I am still kind of confused in many ways on what every little thing in a Spring application does, and tomorrow I should probably write some Anki flashcards and stuff
 to internalize that a little better. 
 I should also understand kind of *how* the UserDetails in memory thing differs from the H2 DB. 
-But I think however that I should keep on experimenting with H2 however. 
+But I think however that I should keep on experimenting with H2, however. 
 
 I created the initial data which seems to work. There is one user and one haiku when you start the app. There is no connection between the entities
 in the model yet however.
@@ -60,11 +60,11 @@ Then I implemented some slightly nicer design, just so it's not so hard on the e
 I added a Postgres database. In the Java code, nothing much changed. I just had problems at first setting things up. But basically I 
 1. Installed Postgres
 2. Set it up as a service with systemctl
-2. Created a local postgres user on my machine
-3. Created a user *in* Postgres called haikuist, and generated a pw for him.
-4. When I tried logging in, it didn't work. I realized in the Postgres conf file some settings where set as authenticating the user with "ident" or something, which didn't work on my machine, so I had to set that to "md5" for password authentication instead.
-5. Then it worked, and my app could connect to the db.
-6. I had to set some specific settings in applications.properties for the data to be created on startup, but after a while it started working.
+3. Created a local postgres user on my machine
+4. Created a user *in* Postgres called haikuist, and generated a pw for him.
+5. When I tried logging in, it didn't work. I realized in the Postgres conf file some settings where set as authenticating the user with "ident" or something, which didn't work on my machine, so I had to set that to "md5" for password authentication instead.
+6. Then it worked, and my app could connect to the db.
+7. I had to set some specific settings in applications.properties for the data to be created on startup, but after a while it started working.
 
 ### 14/6
 
@@ -171,5 +171,18 @@ website is about and what it looks like.
 Added the functionality for navigating between haiku. Works good. Tried to add animation but didn't work, will have to fix that later. Apparently an element can't fade in 
 if it has `display: none` which i had for the hidden haiku. So I don't know if i have to have a temporary class maybe, that removes that property, but still keeps it invisible. We'll see.
 
-I'm also unsure of the font. I really like Bodoni Moda, but it's a bit hard to read unfortunately. I tried to find something else, but didn't manage to find anything 
+I'm also unsure of the font. I really like Bodoni Moda, but it's a bit hard to read, unfortunately. I tried to find something else, but didn't manage to find anything 
 that looked nice. I'll have to find something better later.
+
+### 30/6
+
+No code written today. I've been thinking about what are the next essential steps. I basically *have* the data I want in the application, now it's mostly matter of displaying it.
+I think it's five categories that are TODO: 
+
+1. Design all pages - user, post, , login/signup, options, search results?
+2. Functionality - follow, custom haiku feeds, enable rules, languages, etc
+3. Database implementation of said functionality - following relationships, upvotes on haikus etc
+4. Security - making sure everything is secure and safe.
+5. "Real user" functionality, like signing up and getting an email.
+
+I'm not sure, but I think a good order could be 1 (partially), 4, 5, 2, 3? 
