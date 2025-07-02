@@ -14,7 +14,7 @@ But I think however that I should keep on experimenting with H2, however.
 I created the initial data which seems to work. There is one user and one haiku when you start the app. There is no connection between the entities
 in the model yet however.
 
-I have the UserController, UserRepository and the UserService. I'm not sure I wrote them correctly.
+I have the UserController, UserRepository and the UserService. I'm not sure if I wrote them correctly.
 I guess the next step will be to flesh those out, and experimenting with the user.html page,
 and implementing some simple security options in the `SecurityFilterChain`. 
 
@@ -26,7 +26,7 @@ Today I started off with writing a thymeleaf "fragment" that will be the navbar 
 
 Then I update the user and main html pages to render haikus, and have links between the two pages, so it is easily navigable. 
 
-Note: Thymeleaf uses the getters in the classes for getting the data. At first I just got a bunch of errors, but it was because i hadn't
+Note: Thymeleaf uses the getters in the classes for getting the data. At first, I just got a bunch of errors, but it was because i hadn't
 written the getters for the right data, so Thymeleaf couldn't fint it. Remember this.
 
 I also updated the User and Haiku classes to make the database tables interlink. I haven't fully tested this yet.
